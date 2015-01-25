@@ -24,7 +24,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <ft2build.h>
-#include <freetype/freetype.h>
+#include <freetype.h>
 #include <gtk/gtk.h>
 #include <gdk/gdkkeysyms.h>
 #include <cairo-ps.h>
