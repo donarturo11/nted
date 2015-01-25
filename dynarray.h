@@ -76,6 +76,7 @@ class NedDynArray {
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 static void erroraus(const char *s) {
 	fprintf(stderr, "%s\n", s);
