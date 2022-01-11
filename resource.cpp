@@ -3933,14 +3933,14 @@ void NedResource::writeLilyFreeChord(FILE *fp, NedChordName *chordname, unsigned
 		fprintf(fp, Str);
 	}
 	*midi_len = duration;
-	if (chordname->getUpText() != '\0') {
+	if (chordname->getUpText() != NULL) {
 		fprintf(fp, ":%s", chordname->getUpText());
 		upper = true;
 	}
 	if (minor) {
 		Str[0] = 'm';
 		Str[1] = '\0';
-		if (chordname->getDownText() != '\0') {
+		if (chordname->getDownText() != NULL) {
 			strcat(Str, chordname->getDownText());
 		}
 		if (!upper) {
@@ -3949,7 +3949,7 @@ void NedResource::writeLilyFreeChord(FILE *fp, NedChordName *chordname, unsigned
 		fprintf(fp, "%s", Str);
 	}
 	else {
-		if (chordname->getDownText() != '\0') {
+		if (chordname->getDownText() != NULL) {
 			putc(':', fp);
 			fprintf(fp, "%s", chordname->getDownText());
 		}
