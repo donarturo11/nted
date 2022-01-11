@@ -2538,7 +2538,7 @@ void NedIdiotsEditor::draw_new () {
 
 #define BAR_COLOR 0, 0, 0
 #define NOMINATOR_COLOR 0, 0, 204
-#define HALF_COLOR 0.0, 26, 153
+#define HALF_COLOR 0, 26, 153
 #define QUARTER_COLOR  0, 51, 127
 #define EIGHTS_COLOR 127, 77, 102
 #define COLOR_16 0, 102, 77
