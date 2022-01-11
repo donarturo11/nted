@@ -1369,13 +1369,13 @@ bool NedVoice::tryConvertToTuplet(int method, int tuplet_val, NedChordOrRest *te
 		return FALSE;
 	}
 	ref_duration = (method == 1) ? templ->getDuration() / 2 : templ->getDuration();
-	if ((min_pos_ptr = g_list_find(m_chord_or_rests, templ)) < 0) {
+	if ((min_pos_ptr = g_list_find(m_chord_or_rests, templ)) != NULL) {
 		NedResource::Abort("NedVoice::tryConvertToTuplet(1)");
 	}
-	if ((minpos = g_list_index(m_chord_or_rests, templ)) < 0) {
+	if ((minpos = g_list_index(m_chord_or_rests, templ)) != NULL) {
 		NedResource::Abort("NedVoice::tryConvertToTuplet(2)");
 	}
-	if (((NedChordOrRest *) min_pos_ptr->data)->getTupletVal() != 0) {
+	if (((NedChordOrRest *) min_pos_ptr->data)->getTupletVal() != NULL) {
 		return false;
 	}
 	minpos++;
